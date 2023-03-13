@@ -1,0 +1,137 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+  
+  *, *:after, *:before {
+    box-sizing: border-box;
+  }
+  
+  input {
+    outline: none;
+    outline-offset: none;
+    background-color: #ffffff;
+    border: none;
+  }
+    
+  a, a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  ul, ul li {
+    list-style: none;
+  }
+ body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+  width: 100vw;
+  -webkit-tap-highlight-color: transparent;
+ }
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 1rem;
+}
+
+.accordeon__title {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid #363232;
+}
+
+.accordeon__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.accordeon__inner:hover {
+    cursor: pointer;
+}
+
+.accordeon__inner:hover .item__title{
+    color: #ec0808;
+}
+
+.accordeon__item {
+    width: 100%;
+    padding-top: 1rem;
+    border-bottom: 2px solid #363232;
+
+}
+
+.accordeon__item:hover .item__content {
+    max-height: 50rem;
+}
+
+.accordeon__item:hover .item__title_icon{
+    transform: rotateZ(45deg);
+}
+.item__title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.875rem;
+    color: #020101;
+    font-weight: 700;
+}
+
+.item__title_icon {
+    transition: all .2s linear;
+    width: 1.3rem;
+}
+
+.item__content {
+    max-height: 0rem;
+    overflow: hidden;
+    transition: all 0.2s linear;
+}
+
+.item__img {
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    width: 25rem;
+}
+
+.accordeon__item:focus .item__content {
+    max-height: 100%;
+}
+
+.accordeon__item:focus .item__title{
+    color: #530fd1;
+}
+
+.accordeon__item:focus .item__title_icon{
+    transform: rotate(45deg);
+}
+
+
+/*-------TABLET 820PX-----------*/
+@media (max-width: 51.25rem) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/*-------MOBILE 320PX-----------*/
+@media (max-width: 22.85rem) {
+    html {
+        font-size: 12px;
+    }
+
+    .item__img {
+        width: 15rem;
+    }
+}
